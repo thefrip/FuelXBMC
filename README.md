@@ -6,6 +6,13 @@
 
 A media manager for XMB coded with the FuelPHP framework
 
+## Caution
+
+This software works only with the Frodo version of XBMC and use :
+- thetvdb.com scraper for TV Shows
+- themoviedb.org scraper for Movies
+- the Universal Artist scraper for Artists
+
 ## Installation
 
 If you want to use a virtual host (for example http://vhost) :
