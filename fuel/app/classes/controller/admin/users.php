@@ -7,7 +7,7 @@ class Controller_Admin_Users extends Controller_Admin
 		$data['users'] = Model_User::find('all');
     $data['page_title'] = Lang::get('title.list_users');
 		$this->template->title = $data['page_title'];
-		$this->template->content = View::forge('admin/users/index', $data);
+		$this->template->content = View::forge('admin/user/index', $data);
 	}
 
 	public function action_create()
@@ -50,7 +50,7 @@ class Controller_Admin_Users extends Controller_Admin
 
     $data['page_title'] = Lang::get('title.create_user');
 		$this->template->title = $data['page_title'];
-		$this->template->content = View::forge('admin/users/create', $data);
+		$this->template->content = View::forge('admin/user/create', $data);
 	}
 
 	public function action_edit($id = null)
@@ -133,7 +133,7 @@ class Controller_Admin_Users extends Controller_Admin
 
     $data['page_title'] = Lang::get('title.edit_user');
 		$this->template->title = $data['page_title'];
-		$this->template->content = View::forge('admin/users/edit', $data);
+		$this->template->content = View::forge('admin/user/edit', $data);
 	}
 
 	public function action_delete($id = null)

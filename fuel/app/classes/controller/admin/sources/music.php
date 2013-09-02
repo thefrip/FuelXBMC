@@ -7,7 +7,7 @@ class Controller_Admin_Sources_Music extends Controller_Admin
     $data['server_paths'] = Model_MusicServerPath::find('all');
     $data['page_title'] = Lang::get('title.list_music_server_paths');
 		$this->template->title = $data['page_title'];
-		$this->template->content = View::forge('admin/sources/music/index', $data);
+		$this->template->content = View::forge('admin/source/music/index', $data);
 	}
 
 	public function action_create()
@@ -52,7 +52,7 @@ class Controller_Admin_Sources_Music extends Controller_Admin
 
     $data['page_title'] = Lang::get('title.create_server_path');
 		$this->template->title = $data['page_title'];
-		$this->template->content = View::forge('admin/sources/music/create', $data);
+		$this->template->content = View::forge('admin/source/music/create', $data);
 	}
 
 	public function action_edit($id = null)
@@ -104,7 +104,7 @@ class Controller_Admin_Sources_Music extends Controller_Admin
 
     $data['page_title'] = Lang::get('title.edit_serer_path');
 		$this->template->title = $data['page_title'];
-		$this->template->content = View::forge('admin/sources/music/edit', $data);
+		$this->template->content = View::forge('admin/source/music/edit', $data);
 	}
 
 	public function action_delete($id = null)

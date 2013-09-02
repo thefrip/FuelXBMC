@@ -4,4 +4,4 @@
   </div>
 <?php endif; ?>
 
-<?php echo View::forge('admin/sources/music/_form'); ?>
+<?php echo View::forge('admin/source/music/_form'); ?>

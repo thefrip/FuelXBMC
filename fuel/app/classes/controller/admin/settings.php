@@ -113,7 +113,7 @@ class Controller_Admin_Settings extends Controller_Admin
 
     $data['page_title'] = Lang::get('title.settings');
 		$this->template->title = $data['page_title'];
-		$this->template->content = View::forge('admin/settings/index', $data);
+		$this->template->content = View::forge('admin/setting/index', $data);
 	}
 
 }

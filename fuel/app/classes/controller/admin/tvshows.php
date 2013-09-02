@@ -6,7 +6,7 @@ class Controller_Admin_Tvshows extends Controller_Admin
 	{
     $data['page_title'] = Lang::get('title.list_tvshows');
 		$this->template->title = $data['page_title'];
-		$this->template->content = View::forge('admin/tvshows/index', $data);
+		$this->template->content = View::forge('admin/tvshow/index', $data);
 	}
 
 }

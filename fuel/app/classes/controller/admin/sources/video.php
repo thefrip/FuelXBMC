@@ -29,7 +29,7 @@ class Controller_Admin_Sources_Video extends Controller_Admin
     $data['server_paths'] = $server_paths;
     $data['page_title'] = Lang::get('title.list_video_server_paths');
 		$this->template->title = $data['page_title'];
-		$this->template->content = View::forge('admin/sources/video/index', $data);
+		$this->template->content = View::forge('admin/source/video/index', $data);
 	}
 
 	public function action_edit($id = null)
@@ -83,7 +83,7 @@ class Controller_Admin_Sources_Video extends Controller_Admin
 
     $data['page_title'] = Lang::get('title.edit_server_path');
 		$this->template->title = $data['page_title'];
-		$this->template->content = View::forge('admin/sources/video/edit', $data);
+		$this->template->content = View::forge('admin/source/video/edit', $data);
 
 	}
 
