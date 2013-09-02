@@ -13,6 +13,8 @@ This software works only with the Frodo version of XBMC and use :
 - themoviedb.org scraper for Movies
 - the Universal Artist scraper for Artists
 
+This software has been developed  and tested only in a GNU/Linux environment.
+
 ## Installation
 
 If you want to use a virtual host (for example http://vhost) :
