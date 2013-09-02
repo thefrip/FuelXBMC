@@ -5,3 +5,15 @@
 ## Description
 
 A media manager for XMB coded with the FuelPHP framework
+
+## Installation
+
+If you want to use a virtual host (for example http://vhost) :
+- All the files in the folder 'public' go to the document root folder of your virtual host.
+- The folder 'fuel' go to the parent folder of the document root folder of your virtual host.
+- You can navigate to http://vhost and follow the instructions.
+
+If you don't want to use a virtual host) :
+- The folder 'public' go to the document root folder of your server.
+- The folder 'fuel' go to the parent folder of the document root folder of your server.
+- You can navigate to http://localhost/public and follow the instructions.

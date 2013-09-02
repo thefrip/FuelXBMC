@@ -1,0 +1,224 @@
+/* =======================================
+
+		Main Stylesheet for My-Bootstrap-Site
+
+		Innovations on Twitter Bootstrap
+
+========================================== */
+
+@import url('bootstrap.min.css');
+@import url('bootstrap-responsive.min.css');
+
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Sans'), local('DroidSans'), url(fonts/DroidSans.woff) format('woff');
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Droid Sans', serif;
+}
+
+.rating_bar {
+  width: 160px;
+  height: 16px;
+  background: url(stars.png);
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  text-align: left;
+  margin: 3px 5px 0;
+  float: left;
+}
+.rating {
+  height: 16px;
+  background: url(stars.png);
+  background-position: 0 -16px;
+  background-repeat: repeat-x;
+}
+
+body {
+	background: #D9DDE8;
+}
+
+
+.body {
+	background-color: #fff;
+	border: 1px solid #DDD;
+	border-top: none;
+	-webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+	box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+	padding: 60px 20px 20px 20px;
+	z-index: 1;
+	min-height: 300px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+footer {
+	padding: 10px;
+	color: #858585;
+}
+footer p {
+	font-size: 11px;
+}
+.narrow-body .container {
+	max-width: 800px;
+	min-height: 440px;
+	border-radius: 10px;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+
+.clearfix:after {
+    clear:both;
+}
+.clearfix {
+    zoom:1;
+}
+
+.thumbnail { width:270px; float:left; padding:10px 0px; margin:0 5px 5px 0; background:#fff; }
+.thumbnail h3 { font-size:1.1em; font-weight:bold; letter-spacing:0px; line-height:1em}
+.thumbnail > a > img { display: block; margin-left: auto; margin-right: auto; max-width: 100%; }
+
+.banner > a > img, .banner > img {
+  width: 250px;
+  height: 46px;
+}
+.poster > a > img, .poster > img {
+  width: 250px;
+  height: 334px;
+}
+.fanart > img {
+  width: 250px;
+  height: 141px;
+}
+.album > a > img, .album > img {
+  width: 250px;
+  height: 250px;
+}
+.thumb > a > img, .thumb > img {
+  width: 250px;
+  height: 250px;
+}
+.person > a > img, .person > img {
+  width: 250px;
+  height: 334px;
+}
+
+.episode { width:320px; margin:5px 5px 5px 10px; }
+
+.episode > a > img, .episode > img {
+  width: 300px;
+  height: 169px;
+}
+
+.tvshow {
+  min-height: 390px;
+}
+
+.highlight {
+  -webkit-transition: background-color 1400ms ease-out;
+  -moz-transition: background-color 1400ms ease-out;
+  -o-transition: background-color 1400ms ease-out;
+  -ms-transition: background-color 1400ms ease-out;
+  transition: background-color 1400ms ease-out;
+}
+
+// Image change via ajax
+#loaded-image {
+  background: url(spinner.gif) no-repeat scroll center center #FFFFFF;
+}
+// Warning message if no selection
+div.controls > span.warning-manage {
+  display: none;
+}
+div.opacity {
+	background-size: 110%, auto, 110%	;
+	background-position: top, center, center;
+	background-repeat: no-repeat, no-repeat, no-repeat;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+div.opaque {
+  background-color:rgba(255, 255, 255, 0.8);
+}
+
+#details {
+  padding-top: 10px;
+}
+
+#casting {
+  background-color:rgba(255, 255, 255, 1);
+  padding-bottom: 10px;
+}
+
+#albums_played {
+  background-color:rgba(255, 255, 255, 1);
+  padding-bottom: 10px;
+}
+
+#banner-gallery, #thumb-gallery, #poster-gallery, #fanart-gallery {display: none;}
+
+#sidebar div.row { padding-bottom: 20px; }
+
+a.disabled-link,
+a.disabled-link:visited ,
+a.disabled-link:active,
+a.disabled-link:hover {
+    pointer-events: none
+}
+
+div.ajax-progress {
+  position: fixed;
+  display: none;
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  left: 50%;
+  background-image: url('ajax-loader.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  border: 1px solid #005580;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.login {
+  padding-top: 40px;
+}
+
+.form-signin {
+  max-width: 300px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+
+.form-signin input[type="text"],
+.form-signin input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;
+}
