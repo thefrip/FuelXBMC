@@ -10,11 +10,11 @@
 
         <div class="span3 offset1">
           <div class="thumbnail poster">
-            <?php echo Html::anchor('set/'.$set->id.'-'.Inflector::friendly_title($set->title, '-'), '<img src="'.$set->poster->url.'" />'); ?>
+            <?php echo Html::anchor('set/'.$set->id.'-'.Inflector::friendly_title($set->name, '-'), '<img src="'.$set->poster->url.'" />'); ?>
           </div>
         </div>
         <div class="span7">
-          <h3><?php echo Html::anchor('set/'.$set->id.'-'.Inflector::friendly_title($set->title, '-'), $set->title); ?></h3>
+          <h3><?php echo Html::anchor('set/'.$set->id.'-'.Inflector::friendly_title($set->name, '-'), $set->name); ?></h3>
           <div class="row-fluid">
             <div class="span4"><?php echo Lang::get('media.total_movies'); ?></div>
             <div class="span7"><?php echo count($set->movies); ?></div>

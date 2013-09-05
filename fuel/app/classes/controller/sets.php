@@ -52,7 +52,7 @@ class Controller_Sets extends Controller_Base
 
       $config = array(
         'pagination_url' => \Uri::create('sets/search/'.$query.'/page'),
-        'total_items' => Model_Set::count_all_by_title($title),
+        'total_items' => Model_SetView::count_all_by_title($title),
         'per_page' => 8,
         'uri_segment' => 5,
         'num_links' => 3,
@@ -107,7 +107,7 @@ class Controller_Sets extends Controller_Base
 
       $data['movies'] = Model_MovieView::read_all_by_set($set_id, $pagination->per_page, $pagination->offset);
       $data['movies_type'] = 'movies_set';
-      $data['page_title'] = $set->title;
+      $data['page_title'] = $set->name;
       $data['pagination'] = $pagination->render();
 
       $data['set'] = $set;

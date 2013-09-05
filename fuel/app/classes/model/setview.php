@@ -166,10 +166,18 @@ class Model_SetView extends Orm\Model
     {
       $set = new stdClass();
       $set->id = $result->idSet;
-      $set->title = $result->strSet;
+      $set->name = $result->strSet;
 
       $movies = Model_MovieView::read_all_by_set($set->id);
-      $set->poster = $movies[0]->poster;
+
+      if (count($movies) > 0)
+      {
+        $set->poster = $movies[0]->poster;
+      }
+      else
+      {
+        $set->poster = Xbmc::get_movie_poster('');
+      }
       $set->movies = $movies;
 
       return $set;

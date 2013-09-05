@@ -27,8 +27,8 @@ class Model_MovieView extends Orm\Model
 		'c22',
 		'c23',          // foreign key for path table
     'strFileName',
-    'idSet',
-    'strSet',
+    'idSet',        // foreign key for sets table
+    'strSet',       // set name for this movie if movie in set
     'strPath',
     'playCount',
     'lastPlayed',
@@ -777,7 +777,6 @@ class Model_MovieView extends Orm\Model
         $set = new stdClass();
         $set->id = 0;
         $set->name = '';
-        $set->order = ($result->c10 != '') ? $result->c10 : 0;
 
         // Si le film fait partie d'une saga
         if ($result->idSet and $result->strSet)

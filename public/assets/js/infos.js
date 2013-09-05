@@ -307,6 +307,13 @@ $(document).ready(function() {
               $('#year').highlight();
             }
 
+            // new set for this movie or movie removed from set?
+            if (json.set !== undefined)
+            {
+              $('#set').html(json.set);
+              $('#set').highlight();
+            }
+
             // new runtime?
             if (json.runtime !== undefined)
             {

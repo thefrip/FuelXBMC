@@ -35,6 +35,7 @@ class Model_Movie extends Model
 		'c22',      // unknown
 		'c23',      // foreign key for path table
 		'idFile',   // foreign key for files table
+		'idSet',    // foreign key for sets table
 	);
 
   public function manage_data($input)
@@ -133,6 +134,28 @@ class Model_Movie extends Model
         $certification = Model_Certification::find_by_value((int) $input['certification']);
         $this->c12 = $certification->name;
         $json['certification'] = $this->c12;
+      }
+    }
+
+    // if we manage movies sets
+    if (isset($input['set']))
+    {
+      // new set?
+      if ($this->idSet != $input['set'])
+      {
+        $idSet = (int) $input['set'];
+        // remove movie from set?
+        if ((int) $input['set'] == 0)
+        {
+          $this->idSet = null;
+          $json['set'] = '';
+        }
+        else
+        {
+          $this->idSet = $idSet;
+          $set = Model_SetView::read($idSet);
+          $json['set'] = sprintf(Lang::get('media.in_set'), Html::anchor('set/'.$set->id.'-'.Inflector::friendly_title($set->name, '-'), $set->name));
+        }
       }
     }
 
